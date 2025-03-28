@@ -11,7 +11,7 @@ namespace MIgrationTests.Test.Extensions
     {
         public static WebApplicationFactory<Program> WithSqlContainer(
             this WebApplicationFactory<Program> factory,
-            SqlServerContainer sqlContainer)
+            Containers.SqlServerContainer sqlContainer)
         {
             return factory.WithWebHostBuilder(builder =>
             {

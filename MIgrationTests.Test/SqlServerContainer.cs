@@ -2,11 +2,11 @@ using Testcontainers.MsSql;
 
 namespace MIgrationTests.Test
 {
-    public class SqlServerContainerFacatory : IAsyncDisposable
+    public class SqlServerContainer : IAsyncDisposable
     {
         private readonly MsSqlContainer _container;
 
-        public SqlServerContainerFacatory()
+        public SqlServerContainer()
         {
             _container = new MsSqlBuilder()
                 .WithPassword("Teste@2025")
@@ -28,4 +28,4 @@ namespace MIgrationTests.Test
             await _container.DisposeAsync();
         }
     }
-} 
+}

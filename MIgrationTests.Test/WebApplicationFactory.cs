@@ -6,11 +6,11 @@ using MigrationTests.API.ContextDb;
 
 namespace MIgrationTests.Test
 {
-    public static class WebApplicationFactoryExtensions
+    public static class WebApplicationFactory
     {
         public static WebApplicationFactory<Program> WithSqlContainer(
             this WebApplicationFactory<Program> factory,
-            SqlServerContainerFacatory sqlContainer)
+            SqlServerContainer sqlContainer)
         {
             return factory.WithWebHostBuilder(builder =>
             {
